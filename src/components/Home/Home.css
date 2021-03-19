@@ -1,0 +1,9 @@
+.banner{
+    background-image: url('https://i.ibb.co/LvP9n7P/Bg.png');
+    min-height: 100%;
+    min-width: 100%; 
+    background-size: contain;
+} 
+.items h1{
+    margin-bottom: 20px;
+}
