@@ -25,7 +25,7 @@ function App() {
       
       <Router>
       <Header></Header>
-      <p>Name: { loggedInUser.name }</p>
+      <h2 className="text-center">Name: { loggedInUser.name }</h2>
         <Switch>
             <Route path="/header">
             </Route>

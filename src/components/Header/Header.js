@@ -7,11 +7,11 @@ const Header = () => {
     return (
         <div className="container">
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand >
+                <Navbar.Brand className="">
                     <Link to ="/home">Destination-Rider</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
+                    <Nav className="ml-auto">
                        <li><Link Link to="/home">Home</Link></li> 
                        <li><Link to="/destination">Destination</Link></li>
                        <li><Link to="/blog">Blog</Link></li>

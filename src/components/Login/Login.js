@@ -30,34 +30,22 @@ const Login = () => {
         const provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth()
             .signInWithPopup(provider)
-    //         .then((result) => {
-    //             const user = result.user;
-    //             console.log(user);
-    //             setUser(user);
-    //             setLoggedInUser(user);
-    //             history.replace(from);
-
-    //         }).catch((error) => {
-    //             var errorCode = error.code;
-    //             var errorMessage = error.message;
-    //             var email = error.email;
-    //             var credential = error.credential;
-    //         });
-    // }
-    .then(res => {
-        const {displayName, photoURL, email} = res.user;
-        const signedInUser = {
-          isSignedIn: true,
-          name: displayName,
-          email: email,
-          photo: photoURL
-        };
-        setUser(signedInUser);
-      })
-      .catch(err => {
-        console.log(err);
-        console.log(err.message);
-      })
+            .then(res => {
+                const { displayName, photoURL, email } = res.user;
+                const signedInUser = {
+                    isSignedIn: true,
+                    name: displayName,
+                    email: email,
+                    photo: photoURL
+                };
+                setUser(signedInUser);
+                setLoggedInUser(signedInUser);
+                history.replace(from);
+            })
+            .catch(err => {
+                console.log(err);
+                console.log(err.message);
+            })
     }
 
     const handleChangeValue = (e) => {
@@ -77,8 +65,8 @@ const Login = () => {
                     newUserInfo.error = '';
                     newUserInfo.success = true;
                     setUser(newUserInfo);
-                    loggedInUser(newUserInfo);
-                    history.replace(from);
+                    // setLoggedInUser(newUserInfo);
+                    // history.replace(from);
                 })
                 .catch(error => {
                     const newUserInfo = { ...user };
@@ -98,13 +86,14 @@ const Login = () => {
                     setLoggedInUser(newUserInfo);
                     history.replace(from);
 
-                    // console.log('sign in user info', res.user);
                 })
                 .catch(function (error) {
                     const newUserInfo = { ...user };
                     newUserInfo.error = error.message;
                     newUserInfo.success = false;
                     setUser(newUserInfo);
+                    setLoggedInUser(newUserInfo);
+                    history.replace(from);
                 });
         }
 
@@ -114,14 +103,13 @@ const Login = () => {
     return (
         <div className="container">
             <div>
-                {/* <h1>Name: {user.name, user.displayName}</h1>
-                <h1>Email: {user.email}</h1> */}
+
                 {
-              user.isSignedIn && <div>
-                <p>Welcome, {user.name}!</p>
-                <p>Your email: {user.email}</p>
-              </div>
-            }
+                    user.isSignedIn && <div>
+                        <p>Welcome, {user.name}!</p>
+                        <p>Your email: {user.email}</p>
+                    </div>
+                }
                 <Form>
 
                     <Form.Group controlId="formBasicCheckbox">
@@ -152,7 +140,7 @@ const Login = () => {
                         Submit
                     </Button>
                 </Form>
-               
+
                 <p style={{ color: 'red' }} >{user.error}</p>
                 {
                     user.success && <p style={{ color: 'green' }}>User {newUser ? 'created' : 'Logged in'} successfully</p>
@@ -160,7 +148,7 @@ const Login = () => {
                 <br />
             </div>
 
-            <Button onClick={handleGoogleSignIn}>Google</Button>
+            <Button variant="danger" onClick={handleGoogleSignIn}>Sign in with Google</Button>
         </div>
     );
 };
