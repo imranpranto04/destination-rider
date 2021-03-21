@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Form, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 import './Header.css'
 
 const Header = () => {
+
+    // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+
     return (
         <div className="container">
             <Navbar bg="light" expand="lg">
@@ -13,10 +18,14 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
                        <li><Link Link to="/home">Home</Link></li> 
-                       <li><Link to="/destination">Destination</Link></li>
+                       <li><Link to="/destination/:id">Destination</Link></li>
                        <li><Link to="/blog">Blog</Link></li>
                        <li><Link to="/contact">Contact</Link></li>
-                       <li><Link to="/login">Login</Link></li>                        
+                       <li>
+
+                           <Link to="/login">Login</Link>
+                           
+                        </li>                        
                         
                     </Nav>
                   

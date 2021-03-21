@@ -65,8 +65,8 @@ const Login = () => {
                     newUserInfo.error = '';
                     newUserInfo.success = true;
                     setUser(newUserInfo);
-                    // setLoggedInUser(newUserInfo);
-                    // history.replace(from);
+                    setLoggedInUser(newUserInfo);
+                    history.replace(from);
                 })
                 .catch(error => {
                     const newUserInfo = { ...user };

@@ -10,7 +10,7 @@ const Home = () => {
 
     useEffect(() =>{
         setRider(riderData);
-        console.log(riderData);
+        // console.log(riderData);
     },[])
 
     return (

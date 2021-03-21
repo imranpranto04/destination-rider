@@ -1,8 +1,11 @@
 [
     {
-    "id": 1,
+    "id": 11,
     "name": "Bike",
     "image": "https://i.ibb.co/WfYL2QY/Frame.png",
+    "rent": 65,
+    "from":"Mirpur-10",
+    "to": "Dhanmondi",
     "username": "Bret",
     "email": "Sincere@april.biz",
     "address": {
@@ -24,10 +27,13 @@
     }
     },
     {
-    "id": 2,
+    "id": 22,
     "name": "car",
     "image": "https://static.vecteezy.com/system/resources/previews/001/503/746/non_2x/red-car-cartoon-style-isolated-on-white-background-free-vector.jpg",
     "username": "Antonette",
+    "rent": 67,
+    "from":"Mirpur-10",
+    "to": "Dhanmondi",
     "email": "Shanna@melissa.tv",
     "address": {
     "street": "Victor Plains",
@@ -48,10 +54,13 @@
     }
     },
     {
-    "id": 3,
+    "id": 33,
     "name": "Bus",
     "image": "https://www.uttaramotorsltd.com/wp-content/uploads/2015/12/LT-Bus.png",
     "username": "Samantha",
+    "rent": 60,
+    "from":"Mirpur-10",
+    "to": "Dhanmondi",
     "email": "Nathan@yesenia.net",
     "address": {
     "street": "Douglas Extension",
@@ -72,10 +81,13 @@
     }
     },
     {
-    "id": 4,
+    "id": 44,
     "name": "Train",
     "image": "https://previews.123rf.com/images/rasslava/rasslava1306/rasslava130601013/20217258-3d-illustration-of-modern-high-speed-train-isolated-on-white-background.jpg",
     "username": "Karianne",
+    "rent": 61,
+    "from":"Mirpur-10",
+    "to": "Dhanmondi",
     "email": "Julianne.OConner@kory.org",
     "address": {
     "street": "Hoeger Mall",
