@@ -18,7 +18,7 @@ const Home = () => {
             
           <div className="row d-flex justify-content-center  ">
           {
-               rider.map(ride=> <RideShow ride={ride}></RideShow>)
+               rider.map(ride=> <RideShow ride={ride} key={ride.username}></RideShow>)
            }
           </div>
 
