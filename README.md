@@ -1,4 +1,4 @@
-# Project Name: Destination Rider
+# Project Name: Destination Rider Service
 
 # Website Link: https://destination-rider.web.app/
 
